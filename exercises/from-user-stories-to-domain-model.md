@@ -21,10 +21,9 @@ And here is one possible functional representation of that story.
 _'@' denotes a type. For example, `name(@String)` means the variable `name` will be a string data type; and `vegetables(@String[])` means the variable `vegetables` is an array of strings data type._
 
 | Methods | Inputs | Scenario | Outputs
-| ------ | ------ | ------ | -----
+| ------ | ------ | ------ | ----- 
 | searchByCohortName(cohortList, cohortName) | cohortList(@String[]), cohortName(@String) | If cohort name is in array | true
 | | | If cohort name is not in array | false
-
 
 > **Question**: evaluate this representation - what assumptions are being made and what information do you need to do things differently?
 
@@ -46,8 +45,14 @@ I'd like to see a receipt that includes line items (quantity, name, cost) and th
 
 Add the following to the file `domain-model.md`:
 - [ ] Write down all the **nouns** and then all the **verbs** in the User Stories
-- [ ] Draw a table like the first one above and add information regarding **Methods**, **Inputs**, **Scenarios**, and **Outputs** within the table
-- [ ] Add a column **Data** that describes more about the data for an item in the basket (hint: look for the key **nouns** within the user stories)
+
+| Methods | Inputs | Scenario | Outputs
+| ------ | ------ | ------ | ----- 
+| displayItemsInCart(cart[@Objects]) | cart[@Objects] | >0 of items | sum of all @Object.price * @Object.quantity
+| | | 0 | 0
+
+- [x] Draw a table like the first one above and add information regarding **Methods**, **Inputs**, **Scenarios**, and **Outputs** within the table
+- [x] Add a column **Data** that describes more about the data for an item in the basket (hint: look for the key **nouns** within the user stories)
 - [ ] Show it to someone in your cohort or coach and see if it makes sense to them.
 
 ### Further work
